@@ -65,4 +65,6 @@ export SPARK_MASTER_PORT=<%= node['hadoop_spark']['master']['port'] %>
 # export SPARK_IDENT_STRING  A string representing this instance of.hops.spark. (Default: $USER)
 # export SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 
+export ARROW_PRE_0_15_IPC_FORMAT=<%= node['hadoop_spark']['yarn']['appMasterEnv']['ARROW_PRE_0_15_IPC_FORMAT'] %>
+
 export PYSPARK_ARCHIVES_PATH=local://<%= node['hadoop_spark']['base_dir'] %>/python/lib/pyspark.zip,local://<%= node['hadoop_spark']['base_dir'] %>/python/lib/py4j-src.zip

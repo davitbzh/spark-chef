@@ -65,6 +65,8 @@ default['hadoop_spark']['yarn']['am']['attemptFailuresValidityInterval'] = "1h"
 
 # Hash of environment variables
 default['hadoop_spark']['yarn']['appMasterEnv']                    = {}
+default['hadoop_spark']['yarn']['appMasterEnv']['ARROW_PRE_0_15_IPC_FORMAT'] = 1
+default['hadoop_spark']['yarn']['executorEnv']['ARROW_PRE_0_15_IPC_FORMAT'] = 1
 default['hadoop_spark']['systemd']                                 = "true"
 
 

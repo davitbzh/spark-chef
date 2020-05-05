@@ -67,5 +67,8 @@ spark.yarn.appMasterEnv.<% env -%>         <% node['hadoop_spark']['yarn']['appM
 #spark.yarn.containerLauncherMaxThreads	25
 #spark.executor.extraJavaOptions  -XX:+PrintGCDetails -Dkey=value -Dnumbers="one two three"
 
+spark.yarn.appMasterEnv.ARROW_PRE_0_15_IPC_FORMAT   <%= node['hadoop_spark']['yarn']['appMasterEnv']['ARROW_PRE_0_15_IPC_FORMAT'] %>
+spark.yarn.executorEnv.ARROW_PRE_0_15_IPC_FORMAT    <%= node['hadoop_spark']['yarn']['executorEnv']['ARROW_PRE_0_15_IPC_FORMAT'] %>
+
 spark.driver.maxResultSize               <%= node['hadoop_spark']['driver']['maxResultSize'] %>
 spark.sql.broadcastTimeout               <%= node['hadoop_spark']['sql']['broadcastTimeout'] %>
